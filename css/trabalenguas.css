@@ -194,15 +194,17 @@ main{
     color: var(--color-textos);
 }
 .main-gallery{
-    min-height: 100vh;
+    /* height: auto; */
 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: .625rem;
+
+    aspect-ratio: 1 / 1;
 }
 .Gallery-article{
     width: 100%;
-    min-height: 18.75rem;
+    /* min-height: 18.75rem; */
 
     border-radius: 1.25rem;
 
@@ -214,6 +216,8 @@ main{
     position: relative;
 
     cursor: pointer;
+
+    aspect-ratio: 1 / 1;
 }
 .Gallery-article:hover{
   transform: scale(1.05);
