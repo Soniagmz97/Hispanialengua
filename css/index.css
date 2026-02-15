@@ -1,0 +1,276 @@
+/* colors */
+:root{
+    --color-principal: #221A10;
+    --color-secundario: #fac400;
+    --color-textos: white;
+}
+
+:root {
+  font-size : 100%;
+  font-family : system-ui, sans-serif;
+  scroll-behavior : smooth;
+}
+* , *::before , *::after {
+  margin : 0;
+  padding : 0;
+  border : 0;
+  box-sizing : border-box;
+  vertical-align : baseline;
+}
+*::before , *::after {
+  display : block;
+}
+img , picture , video , iframe , figure , canvas {
+  max-width : 100%;
+  display : block;
+  width : 100%;
+  height : initial;
+  object-fit : cover;
+  object-position : center center;
+}
+a {
+  display : block;
+  text-decoration : none;
+  color : inherit;
+  font :  inherit;
+}
+p a {
+  display : inline;
+}
+li , menu, summary {
+  list-style-type : none;
+}
+ol {
+  counter-reset : revert;
+}
+h1 , h2 , h3 , h4 , h5 , h6 , p , span , a , strong , blockquote , i , b , u , em , pre , code , mark , del {
+  font :  inherit;
+  line-height :  1em;
+  text-decoration :  none;
+  color : inherit;
+  overflow-wrap : break-word;
+  text-wrap : pretty;
+}
+mark {
+  background-color : transparent;
+}
+blockquote::before , blockquote::after , q::before , q::after {
+  content : none;
+}
+form , input , textarea , select , button , label {
+  font :  inherit;
+  hyphens : auto;
+  background-color : transparent;
+  color : inherit;
+  display : block;
+  appearance : none;
+}
+fieldset {
+  border : none;
+}
+::placeholder {
+  color : unset;
+}
+button , label {
+  cursor : pointer;
+}
+table , tr , td , th , tbody , thead , tfoot {
+  border-collapse : collapse;
+  border-spacing : 0;
+  font : inherit;
+}
+svg {
+  width : 100%;
+  height : initial;
+  display : block;
+  fill : currentColor;
+}
+body {
+  min-height : 100vh;
+  line-height : 1.5em;
+  color : inherit;
+  hyphens : auto;
+  -webkit-font-smoothing : antialiased;
+  -moz-osx-font-smoothing : grayscale;
+}
+
+/* Utilities */
+.u-width100{
+    width: 100%;
+}
+.u-flexRow{
+    display: flex;
+    flex-flow: row nowrap;
+}
+.u-flexCol{
+    display: flex;
+    flex-flow: column nowrap;
+}
+.u-bold{
+    font-weight: bold;
+}
+.u-backSize100{
+  background-size: 100% 100%;
+}
+
+/* Body */
+.Container{
+  min-height: 100vh;
+  background-color: lightblue;
+
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+}
+
+/* Aside */
+.Container-aside{
+  min-height: 100vh;
+  background-color: red;
+
+  padding: 1.25rem;
+
+  justify-content: start;
+  align-items: center;
+  gap: 1.25rem;
+}
+.Aside-logo{
+  justify-content: center;
+  align-items: center;
+  gap: .3125rem;
+}
+.Logo-image{
+  width: 1.875rem;
+  height: 1.875rem;
+  background-color: blue;
+}
+.Logo-h1{}
+.Aside-ul{
+  justify-content: center;
+  align-items: start;
+  gap: 1.25rem;
+}
+.Aside-li{}
+
+
+/* Main */
+.Container-main{
+  min-height: 100vh;
+  background-color: orange;
+
+  padding: 1.25rem 3.125rem;
+
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.875rem;
+}
+.Main-h2{
+  font-size: 3em;
+}
+.Main-image{
+  min-height: 300px;
+  background-color: lightcoral;
+
+  padding: .625rem;
+
+  justify-content: center;
+  align-items: end;
+}
+.Main-p{
+  width: 70%;
+
+  font-size: 1.3em;
+
+  text-align: center;
+}
+.Main-carrousel{
+  /* min-height: 18.75rem; */
+  background-color: lightgreen;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+.Carrousel-container{
+  /* width: 500%; */
+  background-color: green;
+
+  overflow: hidden;
+
+  position: relative;
+}
+.Carrousel-ul{
+  width: 500%;
+}
+.Carrousel-apartado{
+  min-height: 300px;
+  background-color: pink;
+
+  padding: .625rem;
+
+  border-radius: 1.875rem;
+
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  justify-content: start;
+  align-items: center;
+}.Carrousel-apartado a{
+  background-color: white;
+  
+  padding: .625rem;
+
+  border-radius: .625rem;
+}
+.Carrousel-prev{
+  width: 40px;
+  height: 40px;
+  background-color: blue;
+  position: absolute;
+  top: 50%;
+  left: 3%;
+}
+.Carrousel-prev svg, .Carrousel-next svg{
+  fill: white;
+}
+.Carrousel-next{
+  width: 40px;
+  height: 40px;
+  background-color: blue;
+  position: absolute;
+  top: 50%;
+  right: 3%;
+}
+
+/* Back images */
+/* Carrousel educativo */
+.Carrousel-container:nth-child(1) .Carrousel-apartado:nth-child(1){
+  background-image: url("../assets/images/principal/capsulas.webp");
+}
+.Carrousel-container:nth-child(1) .Carrousel-apartado:nth-child(2){
+  background-image: url("../assets/images/principal/paremias.webp");
+}
+.Carrousel-container:nth-child(1) .Carrousel-apartado:nth-child(3){
+  background-image: url("../assets/images/principal/español_vivo.webp");
+}
+.Carrousel-container:nth-child(1) .Carrousel-apartado:nth-child(4){
+  background-image: url("../assets/images/principal/trabalenguas.webp");
+}
+.Carrousel-container:nth-child(1) .Carrousel-apartado:nth-child(5){
+  background-image: url("../assets/images/principal/juegos.webp");
+}
+/* Carrousel curiosidades */
+.Carrousel-container:nth-child(2) .Carrousel-apartado:nth-child(1){
+  background-image: url("../assets/images/principal/cortos.webp");
+}
+.Carrousel-container:nth-child(2) .Carrousel-apartado:nth-child(2){
+  background-image: url("../assets/images/principal/cultura.webp");
+}
+.Carrousel-container:nth-child(2) .Carrousel-apartado:nth-child(3){
+  background-image: url("../assets/images/principal/musica.webp");
+}
+.Carrousel-container:nth-child(2) .Carrousel-apartado:nth-child(4){
+  background-image: url("../assets/images/principal/nuestra_comarca.webp");
+}
+.Carrousel-container:nth-child(2) .Carrousel-apartado:nth-child(5){
+  background-image: url("../assets/images/principal/sobre_nosotros.webp");
+}
