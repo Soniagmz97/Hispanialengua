@@ -212,6 +212,10 @@ body {
 
 .Logo-h1 {}
 
+.Aside-button{
+  display: none;
+}
+
 .Aside-ul {
   justify-content: center;
   align-items: start;
@@ -238,8 +242,12 @@ body {
 }
 
 .Main-image {
-  min-height: 300px;
+  min-height: 400px;
   background-color: lightcoral;
+
+  background-image: url("../assets/images/principal/hispanialengua.webp");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 
   padding: .625rem;
 
@@ -251,6 +259,8 @@ body {
   width: 70%;
 
   font-size: 1.3em;
+
+  color: var(--color-textos);
 
   text-align: center;
 }
@@ -371,4 +381,32 @@ body {
 
 .Carrousel-container:nth-child(2) .Carrousel-apartado:nth-child(5) {
   background-image: url("../assets/images/principal/sobre_nosotros.webp");
+}
+
+/* @medias */
+@media(max-width: 1000px) {
+  .Main-carrousel {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media(max-width: 350px){
+  .Container{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .Aside-button{
+    display: block;
+  }
+  .Aside-button svg{
+    fill: var(--color-textos);
+  }
+  .Aside-ul{
+    display: none;
+
+    position: absolute;
+    top: 100px;
+    left: 50%;
+  }
+  .Container-aside{
+    min-height: 6.25rem;
+  }
 }

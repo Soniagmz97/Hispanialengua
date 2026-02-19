@@ -1,7 +1,15 @@
 "use strict"
 
 const carrouselContainer = document.querySelectorAll(`.Carrousel-container`)
+const menuButton = document.querySelector(`.Aside-button`)
+const menuUl = document.querySelector(`.Aside-ul`)
 
+// Menu button
+menuButton.addEventListener(`click`, () => {
+    menuUl
+})
+
+// Carrousel
 carrouselContainer.forEach((eachCarrousel) => {
     let indiceActual = 0
     const carrouselUl = eachCarrousel.querySelector(`.Carrousel-ul`)
